@@ -1,0 +1,303 @@
+body, head { margin: 0; padding: 0; text-decoration: none; outline: none;  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+main {
+    padding: 25px 60px;
+    width: 100%;
+}
+header {
+    width: 100%;
+    z-index: 100;
+}
+.list_of_groups_title{
+    justify-content: center;
+}
+.button--unstyled {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.button--unstyled:focus {
+    border: none;
+}
+
+/*Details of Group Styles*/
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.details_group_title {
+    text-align: center;
+    font-size: 32px;
+    color: #0c5460;
+    text-transform: uppercase;
+}
+/*List of Lessons*/
+.list_of_lesson_title{
+    border-bottom: 1px solid #c8cbcf;
+    justify-content: center;
+    margin: 0 100px 20px 100px;
+}
+
+.lesson_item_wrap__lesson_item {
+    margin: 15px;
+    padding: 15px 15px 60px 15px;
+    border: 1px solid #4e555b;
+    position: relative;
+    background-color: #0c5460;
+    box-shadow: 5px 3px 9px 0px #0000005c;
+    transform: scale(1);
+    transition: 0.3s;
+}
+.lesson_item_wrap__lesson_item:hover{
+    box-shadow: 5px 3px 13px 0px #0000005c;
+    transform: scale(1.05);
+}
+
+.lesson_item__date {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-style: italic;
+    color: #7abaff;
+}
+.lesson_item__button {
+    width: 80px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.lesson_item__button:hover {
+    text-decoration: none!important;
+    background: #d1d1d1;
+    color: black;
+    font-weight: bold;
+}
+.lesson_item__title {
+    font-size: 24px;
+    color: white;
+}
+.lesson_item__title > span {
+    text-transform: uppercase;
+    color: #0062cc;
+}
+
+/*List of student component style*/
+.list_of_students_title{
+    border-bottom: 1px solid #c8cbcf;
+    justify-content: center;
+    margin: 0 100px 20px 100px;
+}
+.title_students {
+    font-size: 2.5rem;
+    color: #000;
+    width: 100%;
+    justify-content: center;
+}
+.student_content_block_wrap__student_content_block {
+    margin: 8px;
+    padding: 15px 15px 60px 15px;
+    border: 1px solid #4e555b;
+    position: relative;
+    background-color: #0f6674;
+    box-shadow: 5px 3px 9px 0px #0000005c;
+    transform: scale(1);
+    transition: 0.3s;
+}
+.student_content_block_wrap__student_content_block:hover{
+    box-shadow: 5px 3px 13px 0px #0000005c;
+    transform: scale(1.05);
+}
+.student_content_block__edit_btn {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+}
+.student_content_block__edit_btn:hover{
+    color: #34ce57;
+}
+
+.student_content_block__delete_btn{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+.student_content_block__delete_btn:hover{
+    color: #b21f2d;
+}
+.student_details__button{
+    position: absolute;
+    bottom: 20px;
+}
+.student_info__name, .student_info__group_name, .student_info__email {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.student_info__email {
+    font-size: 14px;
+    color: #23272b;
+    text-transform: none;
+}
+#modal-window {
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    padding-top: 15%;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#modal-window .modal-window__error {
+    display: none;
+}
+
+.details_group_dates {
+    font-size: 21px;
+    color: #0f6674;
+    font-weight: bold;
+    text-align: center;
+}
+.details_group_wrap_info {
+    width: 100%;
+    font-size: 24px;
+    color: #0c5460;
+    padding-top: 25px;
+    font-weight: bold;
+}
+.details_group_wrap_info__title > span {
+    color: #1b1e21;
+    font-weight: normal;
+}
+.details_group_wrap_info__title {
+    font-size: 24px;
+    color: #0f6674;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 25px 0;
+}
+.details_group_wrap_lessons_info {
+    border-top: 1px solid black;
+}
+.details_group_wrap__info__table {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.sidebar {
+    visibility: hidden;
+    color: #B4B4B4;
+    width: 150px;
+    min-height: calc(100vh - 53px);
+    transform: translateX(-100px);
+    transition: ease .1s;
+    position: fixed;
+    top: 53px;
+    z-index: 100;
+}
+.sidebar:hover {
+    transform: translateX(0);
+}
+
+.sidebar__nav-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 20px;
+}
+
+.sidebar__nav-item {
+    padding: 15px 10px;
+    border-bottom: 1px solid #bbb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar__nav-item .sidebar__nav-label {
+    visibility: hidden;
+    font-size: 18px;
+}
+
+.sidebar:hover .sidebar__nav-item .sidebar__nav-label {
+    visibility: visible;
+}
+
+.sidebar__nav-item .sidebar__item-icon {
+    display: block;
+    text-align: center;
+    width: 30px;
+}
+
+.sidebar__nav-item:hover {
+    cursor: pointer;
+    color: #fff;
+    transition: ease .1s;
+    background-color: #4D5359;
+}
+
+/*Header Styles*/
+.navbar {
+    padding: 5px;
+    z-index: 10;
+    min-height: 53px;
+    max-height: 53px;
+}
+.navbar-brand {
+    padding: 0 0 5px 0;
+}
+.nav-link {
+    color: #fff!important;
+    font-weight: bold;
+}
+.nav-link__role {
+    color: #009db7;
+    font-weight: bold;
+    margin-right: 15px;
+}
+.dropdown-menu {
+    left: unset;
+    right: 0!important;
+    width: 105px;
+    top: 45px;
+    margin: 0;
+    padding: 0px;
+    border: none;
+    border-radius: 0px 0px 5px 5px;
+}
+.dropdown-item {
+    font-weight: bold;
+    color: #fff!important;
+    text-align: center;
+    padding: 4px 0px;
+    border-bottom: 1px solid #ffffff;
+    transition: 0.3s;
+}
+.dropdown-item:hover {
+    background: #3b3e41;
+    color: #ba3736 !important;
+}
+.dropdown-item:last-child {
+    border-bottom: none;
+    border-radius: 0px 0px 5px 5px;
+}
+ /*Courses List Styles*/
+.course-item__title{
+    color:black;
+    padding: 10px 0px 10px 0px;
+    font-size: 24px;
+}
+.course-item:hover{
+    transform:scale(1.1);
+}
+
+.course-item__icon-delete:hover{
+    cursor:pointer;
+    transform:scale(1.1);
+}
+
+.course-item__icon-edit:hover{
+    cursor:pointer;
+    transform:scale(1.1);
+}
